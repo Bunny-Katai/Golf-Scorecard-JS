@@ -8,10 +8,34 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a4c4c5f631.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="./js/main.js"></script>
     <title>Golf Score Card</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+  <body onload="getCourses()">
+
+    <div class="container-fluid">
+      <h1>Let's Play Golf</h1>
+      <div class="select-course">
+        <select class="form-select" id="select-course"aria-label="Default select example">
+          <option selected hidden value="null">Select your course</option>
+          <!-- <option value="1">Fox Hollow</option>
+          <option value="2">Thanksgiving Point</option>
+          <option value="3">Spanish Oaks</option> -->
+        </select>
+      </div>
+      <div class="select-tee" id="select-tee">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select your tee type</option>
+          <option value="1">Pro</option>
+          <option value="2">Men</option>
+          <option value="3">Women</option>
+          <option value="3">Champion</option>
+        </select>
+      </div>
+        <div class = "button" onclick="createCard">Start</div>
+    </div>
+    <!--<nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><i class="fas fa-golf-ball" style="color: white"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +60,7 @@
     
 
 
-      <h2>Golf Scorecard</h2>
+   <h2>Golf Scorecard</h2>
       <div class = "table-responsive">
       <table class="table">
      
@@ -69,7 +93,7 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Yardage</th>
+            <th scope="row" id = "yardage">Yardage</th>
             <th class="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -82,7 +106,7 @@
             <th scope="col"></th>
           </tr>
           <tr>
-            <th scope="row">Handicap</th>
+            <th scope="row" id = "Handicap">Handicap</th>
             <th class="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -95,7 +119,7 @@
             <th scope="col"></th>
           </tr>
           <tr>
-            <th scope="row">Par</th>
+            <th scope="row" id ="par">Par</th>
             <th class="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -108,7 +132,7 @@
             <th scope="col"></th>
           </tr>
           <tr>
-            <th scope="row">Name</th>
+            <th scope="row" id = "player1">Player 1</th>
             <th class="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -121,7 +145,7 @@
             <th scope="col"></th>
           </tr>
           <tr>
-            <th scope="row">Name</th>
+            <th scope="row" id = "player2">Player 2</th>
             <th class="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -134,7 +158,7 @@
             <th scope="col"></th>
           </tr>
           <tr>
-            <th scope="row">Name</th>
+            <th scope="row" id = "player3">Player 3</th>
             <th class="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -147,7 +171,7 @@
             <th scope="col"></th>
           </tr>
           <tr>
-            <th scope="row">Name</th>
+            <th scope="row" id = "player4">Player 4</th>
             <th class="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -163,7 +187,7 @@
         </tbody>
     
       </table>
-    </div>
+    </div>-->
       
 
 

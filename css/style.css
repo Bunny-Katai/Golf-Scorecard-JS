@@ -1,4 +1,32 @@
+body {
+    background: url("/assets/golfBackground.png") no-repeat center center fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    overflow: auto;
+    
+}
+.container-fluid {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.39);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 200px;
+    height: 350px;
+}
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+   
+}
 .navbar {
+
     background-color: #8cb369;  
 }
 #navbarDropdown {
@@ -10,4 +38,26 @@
 .fas fa-bars {
     color: white;
    
+}
+.select-course {
+  
+    margin-top: 35px;
+    margin-bottom: 20px;
+    width: 40%;
+   
+}
+.select-tee {
+    margin-bottom: 35px;
+    width: 40%;
+    
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    
 }
