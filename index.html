@@ -12,30 +12,54 @@
     <script defer src="./js/main.js"></script>
     <title>Golf Score Card</title>
   </head>
-  <body onload="getCourses()">
+  <body onload = "getCourses()">
 
-    <div class="container-fluid">
+    <div class = "container-fluid">
       <h1>Let's Play Golf</h1>
-      <div class="select-course">
-        <select class="form-select" id="select-course"aria-label="Default select example">
-          <option selected hidden value="null">Select your course</option>
-          <!-- <option value="1">Fox Hollow</option>
-          <option value="2">Thanksgiving Point</option>
-          <option value="3">Spanish Oaks</option> -->
+      <div class = "select-course" >
+        <select class ="form-select" id = "select-course" aria-label = "Default select example">
         </select>
       </div>
-      <div class="select-tee" id="select-tee">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Select your tee type</option>
-          <option value="1">Pro</option>
-          <option value="2">Men</option>
-          <option value="3">Women</option>
-          <option value="3">Champion</option>
+
+      <div class ="select-tee">
+        <select class="form-select" id = "select-tee" aria-label = "Default select example">
         </select>
       </div>
-        <div class = "button" onclick="createCard">Start</div>
-    </div>
-    <!--<nav class="navbar navbar-expand-lg navbar-light">
+      <div class ="scoreCard-Container">
+        <table class="table table-bordered table-responsive">
+          <thead>
+            <tr id="holes">
+              <th id="" scope="col" style="width: 90px;">Holes</th>
+            </tr>
+          </thead>
+            <tbody id="scorecard">
+            <tr id="yardage">
+              <th scope="row" style="width: 90px;">Yardage</th>
+            </tr>
+            <tr id="par">
+              <th scope="row" style="width: 90px;">Par</th>
+            </tr>
+            <tr id="handicap">
+              <th scope="row" style="width: 90px;">Handicap</th>
+            </tr>
+          </tbody>
+        </table>
+        <input type="text" id="name-input">
+        <button id="add-player" onclick="addPlayer($('#name-input').val())">Add Player</button>
+        <span id="error-msg"></span>
+      </div>
+     
+    </div> 
+   
+
+       
+   
+    
+
+
+
+
+     <!--<nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><i class="fas fa-golf-ball" style="color: white"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,11 +82,9 @@
       </div>
     </nav>
     
-
-
-   <h2>Golf Scorecard</h2>
+  
       <div class = "table-responsive">
-      <table class="table">
+      <table class="table table-bordered">
      
         <thead>
           <tr>
@@ -77,7 +99,6 @@
             <th scope="col">8</th>
             <th scope="col">9</th>
             <th scope="col">OUT</th>
-            <th scope="col">Total</th>
             <th class="col">10</th>
             <th scope="col">11</th>
             <th scope="col">12</th>
@@ -94,16 +115,27 @@
         <tbody>
           <tr>
             <th scope="row" id = "yardage">Yardage</th>
-            <th class="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th class="col" id = "yardage1" ></th>
+            <th scope="col" id = "yardage2"></th>
+            <th scope="col" id = "yardage3"></th>
+            <th scope="col" id = "yardage4"></th>
+            <th scope="col" id = "yardage5"></th>
+            <th scope="col" id = "yardage6"></th>
+            <th scope="col" id = "yardage7"></th>
+            <th scope="col" id = "yardage8"></th>
+            <th scope="col" id = "yardage9"></th>
+            <th scope="col">OUT</th>
+            <th scope="col" id = "yardage10"></th>
+            <th scope="col" id = "yardage11"></th>
+            <th scope="col" id = "yardage12"></th>
+            <th scope="col" id = "yardage13"></th>
+            <th scope="col" id = "yardage14"></th>
+            <th scope="col" id = "yardage15"></th>
+            <th scope="col" id = "yardage16"></th>
+            <th scope="col" id = "yardage17"></th>
+            <th scope="col" id = "yardage18"></th>
+            <th scope="col">In</th>
+            <th scope="col">Total</th>
           </tr>
           <tr>
             <th scope="row" id = "Handicap">Handicap</th>
@@ -116,7 +148,18 @@
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
+            <th scope="col">OUT</th>
             <th scope="col"></th>
+            <th class="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">In</th>
+            <th scope="col">Total</th>
           </tr>
           <tr>
             <th scope="row" id ="par">Par</th>
@@ -129,11 +172,29 @@
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
+            <th scope="col">OUT</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
             <th scope="col"></th>
           </tr>
           <tr>
             <th scope="row" id = "player1">Player 1</th>
-            <th class="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">OUT</th>
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -155,11 +216,29 @@
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
+            <th scope="col">OUT</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
             <th scope="col"></th>
           </tr>
           <tr>
             <th scope="row" id = "player3">Player 3</th>
             <th class="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">OUT</th>
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
@@ -181,16 +260,26 @@
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
+            <th scope="col">OUT</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
             <th scope="col"></th>
           </tr>
        
         </tbody>
     
-      </table>
-    </div>-->
+      </table>-->
+   
       
+    
 
-
+    
 
 
 
