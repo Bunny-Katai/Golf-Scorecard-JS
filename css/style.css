@@ -17,7 +17,7 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     width: 200px;
-    height: 350px;
+    height: 750px;
 }
 h1 {
     text-align: center;
@@ -51,6 +51,13 @@ h1 {
     width: 40%;
     
 }
+.select-player {
+    margin-top: 15px;
+    width: 60%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
 .button {
     display: flex;
     justify-content: center;
@@ -60,4 +67,21 @@ h1 {
     height: 30px;
     width: 80px;
     
+}
+.scoreCard-Container {
+    margin-top: 20px;
+}
+#add-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 10px;
+    height: 30px;
+    width: 150px;
+    border: none;   
+}
+
+.table-data {
+    width: 40px;
 }
