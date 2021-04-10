@@ -1,20 +1,3 @@
-/*const prom = new Promise(
-    (resolve, reject) => {
-        if (1 + 1 !== 2) {
-            resolve('This is true.');
-        } else {
-            reject('This is false.');
-        }
-    }
-);
-
-prom
-.then(message => {
-    console.log(message);
-})
-.catch(error => {
-    console.log(error);
-});*/
 let course;
 let numHoles;
 let courseId = 0;
