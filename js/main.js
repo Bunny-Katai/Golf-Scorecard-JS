@@ -38,6 +38,7 @@ function chooseCourse(courseId) {
 }
 
 function createCard(teeType) {
+    resetTotals();
     numHoles = course.holeCount;
     const holeInfo = course.holes;
 
@@ -233,10 +234,19 @@ function getEndMsg(player, totalScore) {
     const positiveScoreMsg = `${difference} compared to par. On to the PGA, ${player.name}!`;
     const negativeScoreMsg = `${difference} compared to par. Better luck next time, ${player.name}!`;
     if (totalScore <= 108) {
-        $('.scoreCard-Container').append(`<span>${positiveScoreMsg}</span>`);
+        $('.scoreCard-Container').append(`<span class="message">${positiveScoreMsg}</span>`);
     } else {
-        $('.scoreCard-Container').append(`<span>${negativeScoreMsg}</span>`);
+        $('.scoreCard-Container').append(`<span class="message">${negativeScoreMsg}</span>`);
     }
+}
+
+function resetTotals() {
+    yardIn = 0;
+    yardOut = 0;
+    parIn = 0;
+    parOut = 0;
+    hcpIn = 0;
+    hcpOut = 0;
 }
 
 $(document).ready(getCourses);
