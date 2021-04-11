@@ -1,12 +1,11 @@
 body {
     background: url("/assets/golfBackground.png") no-repeat center center fixed;
-    width: 100%;
+    width: 1500px;
     height: 100%;
     margin: 0;
     padding: 0;
     background-size: cover;
-    overflow: auto;
-    
+    overflow: auto;  
 }
 .container-fluid {
     margin-top: 100px;
@@ -16,40 +15,21 @@ body {
     background-color: rgba(128, 128, 128, 0.39);
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 200px;
-    height: 750px;
+    height: 750px; 
 }
 h1 {
     text-align: center;
     color: white;
-    margin-top: 50px;
-   
-}
-.navbar {
-
-    background-color: #8cb369;  
-}
-#navbarDropdown {
-    color: white;
-}
-#navName {
-    color: white;
-}
-.fas fa-bars {
-    color: white;
-   
+    margin-top: 50px;  
 }
 .select-course {
-  
     margin-top: 35px;
     margin-bottom: 20px;
-    width: 40%;
-   
+    width: 40%;  
 }
 .select-tee {
     margin-bottom: 35px;
-    width: 40%;
-    
+    width: 40%;   
 }
 .select-player {
     margin-top: 15px;
@@ -65,8 +45,7 @@ h1 {
     background-color:white;
     border-radius: 10px;
     height: 30px;
-    width: 80px;
-    
+    width: 80px;  
 }
 .scoreCard-Container {
     margin-top: 20px;
@@ -80,8 +59,15 @@ h1 {
     height: 30px;
     width: 150px;
     border: none;   
+   
 }
-
 .table-data {
     width: 40px;
+}
+#name-input{
+    margin-bottom: 20px;
+}
+
+#error-msg {
+    background-color: tomato;
 }
