@@ -56,28 +56,45 @@ h1 {
     
 }
 #add-player {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 130px;
-    border: none;  
-    margin-left: 15px;
-    box-shadow: 3px 4px 0px 0px #080808;
-	background:linear-gradient(to bottom, #8f8d8d 5%, #f7f5f7 100%);
-	background-color:#ededed;
-	border-radius:15px;
-	border:1px solid #d6bcd6;
-	color:#07090a;
-	font-family:Arial;
-	font-size:16px;
-	padding:7px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #e1e2ed;
-    font-family: 'Arya', sans-serif;
-    font-weight: bolder;
-
-}
+    background:#363838;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:40px;
+    font-size:1.2em;
+    padding:0 1em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    margin-left: 20px;
+    border-radius: 8px;
+    font-family:'Balsamiq Sans', cursive;
+  }
+  #add-player:hover{
+    background:#fff;
+    color:#080808;
+  }
+  #add-player:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #232423;
+    transition:400ms ease all;
+  }
+  #add-player:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  #add-player:hover:before,#add-player:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
 .table-data {
     width: 25px;
     font-size: 18px;
@@ -149,4 +166,5 @@ h1 {
     font-weight: bolder;
     color: brown;
     font-style: italic;
+    
 }
