@@ -50,36 +50,36 @@ function createCard(teeType) {
    if(numHoles < 18) {
         for (let hole in holeInfo) {
             const teeBox = holeInfo[hole].teeBoxes[teeType];
-            $("#holes").append(`<div class = "holeBox" ${holeInfo[hole].hole}</div>`);
-            $("#yardage").append(`<div class = "yardBox" id = "yardage-${holeInfo[hole].teeBoxes['']}"><span>${teeBox.yards}</span></div>`);
-            $("#par").append(`<div class = "parBox" id = "par-${holeInfo[hole].hole}"<span>${teeBox.par}</span></div>`);
-            $("#handicap").append(`<div class = "hcpBox" id = "hcp-${holeInfo[hole].hole}"<span>$${teeBox.hcp}</span></div>`);   
+            $("#holes").append(`<div class = "table-header" ${holeInfo[hole].hole}</div>`);
+            $("#yardage").append(`<div class = "table-data" id = "yardage-${holeInfo[hole].teeBoxes['']}"><span>${teeBox.yards}</span></div>`);
+            $("#par").append(`<div class = "table-data" id = "par-${holeInfo[hole].hole}"<span>${teeBox.par}</span></div>`);
+            $("#handicap").append(`<div class = "table-data" id = "hcp-${holeInfo[hole].hole}"<span>$${teeBox.hcp}</span></div>`);   
         }
     } else {
         for (let hole = 0; hole <= 8; hole++) { 
             let teeBox = holeInfo[hole].teeBoxes[teeType];
-            $("#holes").append(`<th scope="col" class="holeBox">${holeInfo[hole].hole}</th>`);
-            $("#yardage").append(`<td class="yardBox">${teeBox.yards}</td>`);
-            $("#par").append(`<td class="parBox">${teeBox.par}</td>`);
-            $("#handicap").append(`<td class="hcpBox">${teeBox.hcp}</td>`);
+            $("#holes").append(`<th scope="col" class="holeBox table-header">${holeInfo[hole].hole}</th>`);
+            $("#yardage").append(`<td class="table-data">${teeBox.yards}</td>`);
+            $("#par").append(`<td class="table-data">${teeBox.par}</td>`);
+            $("#handicap").append(`<td class="table-data">${teeBox.hcp}</td>`);
             yardOut += teeBox.yards;
             parOut += teeBox.par;
             hcpOut += teeBox.hcp;
         }
 
-         $('#holes').append(`<th scope="col" class="holeBox">OUT</th>`);
-         $("#yardage").append(`<td class="yardBox">${yardOut}</td>`);
-         $("#par").append(`<td class="parBox">${parOut}</td>`);
-         $("#handicap").append(`<td class="hcpBox">${hcpOut}</td>`);
+         $('#holes').append(`<th scope="col" class="holeBox table-total-header">OUT</th>`);
+         $("#yardage").append(`<td class="yardBox table-data">${yardOut}</td>`);
+         $("#par").append(`<td class="parBox table-data">${parOut}</td>`);
+         $("#handicap").append(`<td class="hcpBox table-data">${hcpOut}</td>`);
 
          
 
         for (let hole = 9; hole <= 17; hole++) {
             let teeBox = holeInfo[hole].teeBoxes[teeType];
-            $("#holes").append(`<th scope="col" class="holeBox">${holeInfo[hole].hole}</th>`);
-            $("#yardage").append(`<td class="yardBox">${teeBox.yards}</td>`);
-            $("#par").append(`<td class="parBox">${teeBox.par}</td>`);
-            $("#handicap").append(`<td class="hcpBox">${teeBox.hcp}</td>`);
+            $("#holes").append(`<th scope="col" class="holeBox table-header">${holeInfo[hole].hole}</th>`);
+            $("#yardage").append(`<td class="table-data">${teeBox.yards}</td>`);
+            $("#par").append(`<td class="table-data">${teeBox.par}</td>`);
+            $("#handicap").append(`<td class="table-data">${teeBox.hcp}</td>`);
             yardIn += teeBox.yards;
             parIn += teeBox.par;
             hcpIn += teeBox.hcp;
@@ -87,18 +87,18 @@ function createCard(teeType) {
 
         }
 
-        $('#holes').append(`<th scope="col" class="holeBox">IN</th>`);
-        $("#yardage").append(`<td class="yardBox">${yardIn}</td>`);
-        $("#par").append(`<td class="parBox">${parIn}</td>`);
-        $("#handicap").append(`<td class="hcpBox">${hcpIn}</td>`);
+        $('#holes').append(`<th scope="col" class="holeBox table-total-header">IN</th>`);
+        $("#yardage").append(`<td class="yardBox table-data">${yardIn}</td>`);
+        $("#par").append(`<td class="parBox table-data">${parIn}</td>`);
+        $("#handicap").append(`<td class="hcpBox table-data">${hcpIn}</td>`);
        
 
          
     }
-        $('#holes').append(`<th scope="col" class="holeBox">TOTAL</th>`);
-        $("#yardage").append(`<td class="yardBox">${yardIn + yardOut}</td>`);
-        $("#par").append(`<td class="parBox">${parIn + parOut}</td>`);
-        $("#handicap").append(`<td class="hcpBox">${hcpIn + hcpOut}</td>`);
+        $('#holes').append(`<th scope="col" class="holeBox table-total-header">TOTAL</th>`);
+        $("#yardage").append(`<td class="yardBox table-data">${yardIn + yardOut}</td>`);
+        $("#par").append(`<td class="parBox table-data">${parIn + parOut}</td>`);
+        $("#handicap").append(`<td class="hcpBox table-data">${hcpIn + hcpOut}</td>`);
 }
 
 const addPlayer = () => {
@@ -219,7 +219,7 @@ function updateScore(player, score) {
             player.inScores.push(parseInt(score));
             if (player.inScores.length === 9) {
                 const totalScore = player.outScores.reduce(sumScores) + player.inScores.reduce(sumScores);
-                $(`#${player.name}-in-total-score`).html(player.outScores.reduce(sumScores));
+                $(`#${player.name}-in-total-score`).html(player.inScores.reduce(sumScores));
                 $(`#${player.name}-total-score`).html(totalScore);
                 getEndMsg(player, totalScore);
             }

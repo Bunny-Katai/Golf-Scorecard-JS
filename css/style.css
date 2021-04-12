@@ -12,8 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.39);
+    background-color: rgba(49, 48, 48, 0.39);
     margin-top: 100px;
+ 
 }
 
 h1 {
@@ -26,9 +27,7 @@ h1 {
 .select-course {
     margin-top: 35px;
     margin-bottom: 20px;
-    width: 40%; 
-     
-    
+    width: 40%;  
 }
 .select-tee {
     margin-bottom: 35px;
@@ -53,20 +52,19 @@ h1 {
 .scoreCard-Container {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgba(128, 128, 128, 0.39);
-    
+    background-color: rgba(73, 219, 37, 0.644);
     
 }
 #add-player {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
+    height: 40px;
     width: 130px;
     border: none;  
     margin-left: 15px;
-    box-shadow: 3px 4px 0px 0px #899599;
-	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    box-shadow: 3px 4px 0px 0px #080808;
+	background:linear-gradient(to bottom, #8f8d8d 5%, #f7f5f7 100%);
 	background-color:#ededed;
 	border-radius:15px;
 	border:1px solid #d6bcd6;
@@ -77,10 +75,17 @@ h1 {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
     font-family: 'Arya', sans-serif;
+    font-weight: bolder;
 
 }
 .table-data {
-    width: 40px;
+    width: 25px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.table-header {
+    font-size: 20px;
 }
 #name-input{
     margin-bottom: 20px;
@@ -113,7 +118,7 @@ h1 {
 }
 #name-input {
     width: 300px;
-    height: 35px;
+    height: 40px;
     border-radius: 5px;
 }
 @media only screen and (min-width: 768px) {
@@ -129,4 +134,11 @@ h1 {
     height: 8%;  
     border-radius: 50%; 
     background-color: white;
+}
+.score-input {
+    width: 55px;
+}
+.table-total-header {
+    font-size: 20px;
+    font-style: italic;
 }
