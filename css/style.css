@@ -20,6 +20,7 @@ h1 {
     text-align: center;
     color: white;
     padding-top: 50px;  
+    font-family: 'Bungee Shade', cursive;
 }
 
 .select-course {
@@ -71,10 +72,11 @@ h1 {
 	border:1px solid #d6bcd6;
 	color:#07090a;
 	font-family:Arial;
-	font-size:15px;
+	font-size:16px;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
+    font-family: 'Arya', sans-serif;
 
 }
 .table-data {
@@ -85,14 +87,22 @@ h1 {
 }
 #error-msg {
     color: red;
+    background-color: rgba(186, 224, 20, 0.568);
     background-color: white;
     width: auto;
     height: 50px;
+    font-family: 'Blinker', sans-serif;
 }
 .message {
     color: red;
-    background-color: white;
-    margin-left: 700px;
+    background-color: rgba(186, 224, 20, 0.568);
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Blinker', sans-serif;
+    font-size: 20px;
+   
     
 }
 .player-container{
