@@ -68,9 +68,9 @@ function createCard(teeType) {
         }
 
          $('#holes').append(`<th scope="col" class="holeBox table-total-header">OUT</th>`);
-         $("#yardage").append(`<td class="yardBox table-data">${yardOut}</td>`);
-         $("#par").append(`<td class="parBox table-data">${parOut}</td>`);
-         $("#handicap").append(`<td class="hcpBox table-data">${hcpOut}</td>`);
+         $("#yardage").append(`<td class="yardBox table-data-inOutTotal">${yardOut}</td>`);
+         $("#par").append(`<td class="parBox table-data-inOutTotal">${parOut}</td>`);
+         $("#handicap").append(`<td class="hcpBox table-data-inOutTotal">${hcpOut}</td>`);
 
          
 
@@ -88,17 +88,17 @@ function createCard(teeType) {
         }
 
         $('#holes').append(`<th scope="col" class="holeBox table-total-header">IN</th>`);
-        $("#yardage").append(`<td class="yardBox table-data">${yardIn}</td>`);
-        $("#par").append(`<td class="parBox table-data">${parIn}</td>`);
-        $("#handicap").append(`<td class="hcpBox table-data">${hcpIn}</td>`);
+        $("#yardage").append(`<td class="yardBox table-data-inOutTotal">${yardIn}</td>`);
+        $("#par").append(`<td class="parBox table-data-inOutTotal">${parIn}</td>`);
+        $("#handicap").append(`<td class="hcpBox table-data-inOutTotal">${hcpIn}</td>`);
        
 
          
     }
         $('#holes').append(`<th scope="col" class="holeBox table-total-header">TOTAL</th>`);
-        $("#yardage").append(`<td class="yardBox table-data">${yardIn + yardOut}</td>`);
-        $("#par").append(`<td class="parBox table-data">${parIn + parOut}</td>`);
-        $("#handicap").append(`<td class="hcpBox table-data">${hcpIn + hcpOut}</td>`);
+        $("#yardage").append(`<td class="yardBox table-data-inOutTotal">${yardIn + yardOut}</td>`);
+        $("#par").append(`<td class="parBox table-data-inOutTotal">${parIn + parOut}</td>`);
+        $("#handicap").append(`<td class="hcpBox table-data-inOutTotal">${hcpIn + hcpOut}</td>`);
 }
 
 const addPlayer = () => {

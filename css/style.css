@@ -141,4 +141,12 @@ h1 {
 .table-total-header {
     font-size: 20px;
     font-style: italic;
+    color: brown;
+}
+.table-data-inOutTotal {
+    width: 25px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: brown;
+    font-style: italic;
 }
